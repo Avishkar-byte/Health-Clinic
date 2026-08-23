@@ -1,0 +1,26 @@
+{
+  "name": "healthcare-appointment-manager",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "dotenv -e .env -- pnpm -r --parallel run dev",
+    "dev:api": "pnpm --filter @healthcare/api run dev",
+    "dev:worker": "pnpm --filter @healthcare/worker run dev",
+    "dev:web": "pnpm --filter @healthcare/web run dev",
+    "test": "pnpm --filter @healthcare/api run test && pnpm --filter tests run test",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "db:generate": "pnpm --filter @healthcare/db run generate",
+    "db:migrate": "pnpm --filter @healthcare/db run migrate",
+    "db:seed": "pnpm --filter @healthcare/db run seed",
+    "db:push": "pnpm --filter @healthcare/db run push"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0"
+  }
+}

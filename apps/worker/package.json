@@ -1,0 +1,28 @@
+{
+  "name": "@healthcare/worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@healthcare/contracts": "workspace:*",
+    "@healthcare/db": "workspace:*",
+    "@healthcare/prompts": "workspace:*",
+    "@prisma/client": "^6.8.0",
+    "bullmq": "^5.30.0",
+    "ioredis": "^5.4.0",
+    "nodemailer": "^6.9.0",
+    "openai": "^4.70.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

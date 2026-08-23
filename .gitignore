@@ -1,0 +1,16 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.turbo
+.next
+coverage
+.prisma
+*.tsbuildinfo
+
+# One-off local debug scripts — never commit these. They tend to carry
+# hardcoded connection strings/credentials for quick local testing.
+/scratch/
+*.scratch.*
+
